@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shop.info.UpdateShopOwnerInfoController">
+   <children>
+      <HBox>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="600.0">
+               <center>
+                  <ImageView fitHeight="100.0" fitWidth="159.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../../../../Users/Admin/Desktop/image/itsDelivery.png" />
+                     </image>
+                  </ImageView>
+               </center>
+               <top>
+                  <Button mnemonicParsing="false" onAction="#cancelUpdate" style="-fx-background-color: transparent;" BorderPane.alignment="TOP_LEFT">
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/back_thin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </top>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </BorderPane>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="180.0" prefWidth="400.0" spacing="5.0">
+         <children>
+            <Label nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="340.0" text="아이디">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="id" maxWidth="340.0" prefHeight="25.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="180.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <Label prefWidth="340.0" text="비밀번호">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="pw" maxWidth="340.0" prefHeight="25.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="180.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <Label prefWidth="340.0" text="비밀번호 재확인">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="confirmPw" maxWidth="340.0" prefHeight="25.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="180.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <Label prefWidth="340.0" text="가게명">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="name" maxWidth="340.0" prefHeight="25.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="180.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <Label prefWidth="340.0" text="전화번호">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <TextField fx:id="ownerTel" maxWidth="340.0" prefHeight="25.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="266.0" prefWidth="600.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#updateOwnerInfo" prefHeight="37.0" prefWidth="250.0" style="-fx-background-color: #2E75B5;" text="수정" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </children>
+</VBox>

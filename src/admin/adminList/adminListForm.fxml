@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.adminList.AdminListController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/background.png" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="58.0" prefWidth="247.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="230.0" top="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" text="관리자 목록">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets top="12.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="60.0" />
+               </padding>
+            </HBox>
+         </top>
+         <bottom>
+            <VBox prefHeight="91.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="80.0" prefWidth="600.0" spacing="90.0" style="-fx-alignment: center;">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#homeBtn" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../img/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#blackListBtn" style="-fx-background-color: white;">
+                           <graphic>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../img/black_list2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" style="-fx-background-color: white;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../img/adminList2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="600.0" spacing="155.0">
+                     <padding>
+                        <Insets left="189.0" right="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="609.0" prefWidth="600.0">
+               <children>
+                  <TableView fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="380.0" prefWidth="516.0">
+                     <columns>
+                        <TableColumn fx:id="name" prefWidth="145.0" style="-fx-alignment: center;" text="이름" />
+                        <TableColumn fx:id="tel" prefWidth="217.0" style="-fx-alignment: center;" text="전화번호" />
+                        <TableColumn fx:id="position" prefWidth="153.0" style="-fx-alignment: center;" text="소속" />
+                     </columns>
+                  </TableView>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="nameText" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="130.0" promptText="이름" />
+                        <TextField fx:id="telText" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="164.0" promptText="전화번호" />
+                        <TextField fx:id="positionText" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="130.0" promptText="소속" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="551.0" spacing="70.0">
+                     <children>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#addBtn" prefHeight="40.0" prefWidth="90.0" text="추가" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#deleteBtn" prefHeight="40.0" prefWidth="90.0" text="삭제" />
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#detail" prefHeight="40.0" prefWidth="90.0" text="상세보기" />
+                     </children>
+                     <padding>
+                        <Insets left="60.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="40.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

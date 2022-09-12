@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" spacing="30.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shop.order.ShowOrderDetailController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0">
+         <children>
+            <Label text="주문 내역 상세 페이지">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Line endX="580.0" startX="20.0" stroke="#5ba2e2" style="-fx-fill: #5BA2E2;" />
+      <HBox prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label fx:id="sName">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="sBranch">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children></HBox>
+      <Line endX="580.0" startX="20.0" stroke="#5ba2e2" style="-fx-fill: #778899;" />
+      <VBox prefWidth="100.0" spacing="15.0">
+         <children>
+            <HBox prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="주문번호">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="oNum">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="주문일시">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="oTime">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <TableView fx:id="table" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: transparent;">
+                    <columns>
+                      <TableColumn fx:id="o_menu" prefWidth="100.0" text="메뉴명" />
+                      <TableColumn fx:id="o_price" prefWidth="100.0" text="가격" />
+                        <TableColumn fx:id="o_cnt" prefWidth="100.0" text="수량" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox spacing="30.0">
+               <children>
+                  <Label text="고객 정보">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mAddress">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mTel">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Line endX="580.0" startX="20.0" stroke="#5ba2e2" style="-fx-fill: #778899;" />
+      <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="200.0">
+         <children>
+            <Label text="총 주문 금액">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefWidth="200.0">
+               <children>
+                  <Label fx:id="totalPrice">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="원">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <Line endX="580.0" startX="20.0" stroke="#5ba2e2" style="-fx-fill: #778899;" />
+      <HBox alignment="CENTER" prefWidth="200.0" spacing="15.0">
+         <children>
+            <Button fx:id="accept" mnemonicParsing="false" onAction="#acceptOrder" text="주문 승낙">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="refuse" mnemonicParsing="false" onAction="#refuseOrder" text="주문 거절">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+         </children></HBox>
+            <VBox alignment="BOTTOM_CENTER" prefWidth="600.0" spacing="5.0">
+         <children>
+            <Line endX="580.0" startX="20.0" stroke="#5ba2e2" style="-fx-fill: #5BA2E2;" />
+            <HBox alignment="CENTER" prefWidth="600.0" spacing="30.0">
+               <children>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickHomeBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/homeIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickMenuBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/foodMenuIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickSalesBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/salesDetailIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickAskBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/suggestionIon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickListBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/blackListIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickShopInfoBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/shopIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickAcceptedOrdersBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/confirmOrderIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

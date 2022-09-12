@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="member.search.ShopController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/bottom_line_background.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="85.0" prefWidth="600.0">
+               <children>
+                  <ImageView fitHeight="78.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/default_img.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="84.0" prefWidth="405.0">
+                     <children>
+                        <Label fx:id="shopname" prefHeight="100.0" prefWidth="210.0" text="가게명">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="39.0" prefWidth="377.0">
+                           <children>
+                              <Label fx:id="shopLikeCnt" text="찜 [찜개수] 건">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="|">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="shopOrderCnt" text="주문건수 [주문개수] 건">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="|">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="shopReviewBtn" mnemonicParsing="false" onAction="#shopReviewBtnProc" style="-fx-background-color: transparent;" text="리뷰 [리뷰개수] 건">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button fx:id="mainCartBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#mainCartBtnProc" prefHeight="60.0" prefWidth="63.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/cart_blank.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="30.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="85.0" prefWidth="300.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="261.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="공지사항">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="notice" prefHeight="68.0" prefWidth="189.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="266.0">
+                           <children>
+                              <Label prefHeight="21.0" prefWidth="78.0" text="가게설명">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="shopText" prefHeight="64.0" prefWidth="157.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="485.0" prefWidth="700.0">
+               <children>
+                  <TableView fx:id="searchshopTable" prefHeight="473.0" prefWidth="601.0" style="-fx-background-color: transparent;">
+                     <columns>
+                        <TableColumn fx:id="f_photo" prefWidth="103.0" text="메뉴 사진" />
+                        <TableColumn fx:id="f_name" prefWidth="78.0" text="메뉴 명" />
+                        <TableColumn fx:id="f_explain" prefWidth="248.0" text="메뉴 설명" />
+                        <TableColumn fx:id="f_price" prefWidth="72.0" text="메뉴 가격" />
+                        <TableColumn fx:id="f_exp_time" prefWidth="98.0" text="메뉴 배달 시간" />
+                     </columns>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+            <Button fx:id="addcartbtn" mnemonicParsing="false" onAction="#addcartbtnProc" prefHeight="40.0" prefWidth="104.0" style="-fx-background-color: #5BA2E2;" text="장바구니 추가" textFill="WHITE" />
+            <HBox alignment="CENTER" prefHeight="79.0" prefWidth="600.0">
+               <children>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="homeBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickHomeBtn" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/home_blank.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="likeBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickLikeBtn" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/like_blank.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="WHITE" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="searchBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickSearchBtn" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/find_blank.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="WHITE" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="orderListBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickOrderListBtn" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/order_list_blank.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="WHITE" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="mypageBtn" alignment="CENTER" mnemonicParsing="false" onAction="#clickMyInfoBtn" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/mypage_blank.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="WHITE" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

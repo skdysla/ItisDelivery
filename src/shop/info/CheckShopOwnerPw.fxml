@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" spacing="10.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shop.info.CheckPwController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0">
+         <children>
+            <Label text="비밀번호 확인">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Line endX="580.0" startX="20.0" stroke="#5ba2e2" style="-fx-fill: #5BA2E2;" />
+      <VBox alignment="CENTER" fillWidth="false" prefWidth="409.0" spacing="10.0">
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="20.0" prefWidth="200.0" text="현재 비밀번호 입력">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="pw" alignment="CENTER" prefHeight="29.0" prefWidth="263.0" />
+            <Button mnemonicParsing="false" onAction="#confirmOwnerPw" prefHeight="33.0" prefWidth="159.0" text="확인">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" top="40.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="119.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Line endX="580.0" startX="20.0" stroke="#5ba2e2" style="-fx-fill: #5BA2E2;" />
+            <HBox alignment="CENTER" prefWidth="600.0" spacing="30.0">
+               <children>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickHomeBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/homeIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickMenuBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/foodMenuIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickSalesBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/salesDetailIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickAskBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/suggestionIon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickListBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/blackListIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickShopInfoBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/shopIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="50.0" maxWidth="50.0" mnemonicParsing="false" onAction="#clickAcceptedOrdersBtn" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: Transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Users/Admin/Desktop/image/homeImage/confirmOrderIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

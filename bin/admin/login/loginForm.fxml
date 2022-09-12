@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="admin.login.LoginController">
+   <children>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#managerBtn" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: transparent;" text="관리자">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <VBox layoutX="-1.0" prefHeight="235.0" prefWidth="500.0" translateY="60.0">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="70.0" prefWidth="500.0" spacing="20.0">
+               <children>
+                  <Label prefWidth="50.0" text="아이디">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="66.0" prefWidth="500.0" spacing="20.0">
+               <children>
+                  <Label prefWidth="50.0" text="비밀번호">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <PasswordField />
+               </children>
+            </HBox>
+            <VBox prefHeight="110.0" prefWidth="500.0" translateY="-15.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="14.0" prefWidth="23.0" style="-fx-text-fill: #233FA3;" text="가게">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <CheckBox mnemonicParsing="false" prefHeight="16.0" prefWidth="15.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="120.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="44.0" prefWidth="500.0" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="94.0" style="-fx-background-color: #5BA2E2; -fx-text-fill: white;" text="로그인">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="500.0" spacing="10.0" translateY="-5.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="68.0" style="-fx-background-color: transparent;" text="아이디 찾기">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" style="-fx-background-color: transparent;" text="비밀번호 찾기">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" style="-fx-background-color: transparent;" text="회원가입">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="77.0" fitWidth="137.0" layoutX="192.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/mark.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
